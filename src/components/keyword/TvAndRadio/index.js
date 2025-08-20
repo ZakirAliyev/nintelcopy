@@ -19,8 +19,8 @@ const BASE_ROWS = 2;
 
 /** =================== TOKEN HELPER =================== */
 const getToken = () => {
-    // let token = Cookies.get("token") || '';
-    let token = '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLm1lZGlhbGFiLmF6L2F1dGgvbG9naW4iLCJpYXQiOjE3NTU1MTczMzcsImV4cCI6MTc1NTUyMDkzNywibmJmIjoxNzU1NTE3MzM3LCJqdGkiOiJVRlRmVm4zdTNtRTFkZWxKIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.nERbWPj4msze2fylx7NxfDiLM-UPCrvdX3UhTPiXGqw"'
+    let token = Cookies.get("token") || '';
+    // let token = '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLm1lZGlhbGFiLmF6L2F1dGgvbG9naW4iLCJpYXQiOjE3NTU1MTczMzcsImV4cCI6MTc1NTUyMDkzNywibmJmIjoxNzU1NTE3MzM3LCJqdGkiOiJVRlRmVm4zdTNtRTFkZWxKIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.nERbWPj4msze2fylx7NxfDiLM-UPCrvdX3UhTPiXGqw"'
     return token.replace(/^"|"$/g, '');
 };
 
