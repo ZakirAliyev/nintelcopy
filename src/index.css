@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.shadow-custom {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.line {
+  border-right: 2px solid black;
+}
+.l_two {
+  border-right: 1px solid black;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.popular {
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 7% 50%, 0% 0%);
+}
+/* SCROLLBAR START */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #222736;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #626ed4;
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(53, 113, 255, 1);
+}
+/* SCROLLBAR FINSH */
+.skeleton {
+  background: linear-gradient(90deg, #252c41 25%, #2a3042 50%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+.skeleton-result{
+  background: linear-gradient(90deg, #252c41 25%, #2a3042 50%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 25px;
+}
+
+@keyframes loading {
+  to {
+    background-position: -200% 100%;
+  }
+}
+.apexcharts-text {
+  fill: white !important;
+}
+@media screen and (max-width: 768px) {
+  .MuiBox-root {
+    overflow: hidden;
+  }
+  .css-1dle0tc-MuiDrawer-docked .MuiDrawer-paper {
+    width: 100% !important;
+  }
+  .css-98jmv8-MuiButtonBase-root-MuiTab-root {
+    padding: 10px 8px !important;
+  }
+  .css-98jmv8-MuiButtonBase-root-MuiTab-root {
+    min-width: 60px !important;
+  }
+}
+
+.ant-segmented-item {
+ padding: 0 32px !important;
+}
+
+.ant-segmented-item-selected {
+  background: #36394C !important;
+  color: white !important;
+}
+
+.ant-modal-content {
+  background: #454F6D !important;
+  color: white !important;
+  padding: 36px !important;
+}
+
+.ant-modal-close {
+  background: white !important;
+  color: black !important;
+}
+
+.ant-empty-description {
+  color: white !important;
+}
+
+.ant-slider-track {
+  background-color: #1b1f2e !important;
+}
+
+.ant-slider-handle {
+  background-color: #A1AAC4 !important;
+}
+
+.ant-slider-rail {
+  background-color: white !important;
+}
+
+.ant-slider-mark-text {
+  color: white !important;
+  margin-top: 10px !important;
+  font-weight: 500 !important;
+  line-height: 100% !important;
+}

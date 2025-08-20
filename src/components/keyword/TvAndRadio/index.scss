@@ -1,0 +1,453 @@
+#tvAndRadio {
+  .firstWrapper {
+    background: #2A3042;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 16px;
+
+    .intervalWrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .to {
+        color: white;
+        font-weight: 500;
+      }
+    }
+
+    .inputWrapper {
+      position: relative;
+      max-width: 730px;
+      width: 100%;
+      margin-top: 16px;
+
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 0 16px 0 48px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        transition: all .3s ease;
+        outline: none;
+        position: absolute;
+
+        &:focus {
+          border: 1px solid gray;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 13px;
+        left: 16px;
+        color: #929292;
+        cursor: pointer;
+      }
+
+      .icon1 {
+        position: absolute;
+        top: 13px;
+        right: 16px;
+        color: #929292;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+
+    .segmentedWrapper {
+      margin-top: 64px;
+    }
+  }
+
+  .secondWrapper {
+    background: #454F6D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 16px;
+    overflow: hidden;
+    margin-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+
+    .titleWrapper {
+      background: #626ED4;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+
+      .title {
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      .box {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 500;
+        background: white;
+      }
+    }
+
+    .cardWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 16px;
+      position: relative;
+
+      &.is-collapsed::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 48px;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(69, 79, 109, 0) 0%, #454F6D 100%);
+      }
+
+      .card {
+        width: 230px;
+        background: #2A3042;
+        padding: 16px;
+        border-radius: 8px;
+        transition: transform .15s ease, box-shadow .15s ease;
+
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .title {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          color: white;
+          line-height: 1.35;
+          height: 90px;
+        }
+
+        .line {
+          width: 100%;
+          height: 1px;
+          background: #B1B1B1;
+          margin: 16px 0;
+        }
+
+        .date {
+          color: #B1B1B1;
+          text-align: center;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .showMoreWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .showMoreBtn {
+      background: #fff;
+      color: #2A3042;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .1s ease;
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+/* -------- Modal styles -------- */
+
+.modalActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+
+  .actionsLeft {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .actionsRight {
+    display: flex;
+    gap: 8px;
+  }
+
+  .switchBtn {
+    background: #2A3042;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: .8;
+    transition: opacity .15s ease, transform .1s ease;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.videoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .videoMy {
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    height: 380px;
+    object-fit: contain;
+  }
+
+  &.split .videoMy {
+    height: 100%;
+    max-height: 420px; /* sağ panel ilə balans */
+  }
+}
+
+.line123 {
+  width: 100%;
+  height: 1px;
+  background: #B1B1B1;
+  margin: 16px 0;
+}
+
+.melumat {
+  color: #1e1e1e;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  line-height: 1.55;
+}
+
+/* Yeni düzən üçün CSS */
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.div1 {
+  display: flex;
+  gap: 12px;
+}
+
+.div2 {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  line-height: 1.55;
+  color: #1e1e1e;
+  width: 100%;
+}
+
+.div3 {
+  width: 100%;
+}
+
+/* Video hündürlüyü və responsivlik */
+.videoWrapper.split .videoMy {
+  width: 500px;
+}
+
+@media (max-width: 992px) {
+  .div1 {
+    flex-direction: column;
+  }
+  .videoWrapper .videoMy {
+    height: 300px;
+  }
+  .div3 {
+    margin-top: 12px;
+  }
+}
+
+.div2 {
+  background: #2A3042;
+  color: #fff;
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  .sentiment {
+    background: #03D20A;
+    padding: 0 10px;
+    color: black;
+    border-radius: 10px;
+  }
+}
+
+.filterText {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.filterText1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.menimBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 1px solid #A4A4A4;
+  background: #36394C80;
+  width: 150px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.menimBox1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 1px solid #A4A4A4;
+  background: #36394C80;
+  width: 150px;
+  height: 35px;
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 12px;
+}
+
+.menimSelect {
+  height: 35px !important;
+}
+
+.wrapperBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 50px;
+
+  .wrapperBox1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .input1 {
+    width: 250px;
+    height: 45px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+    outline: none;
+    color: black;
+
+    &:focus {
+      border: 1px solid gray;
+    }
+  }
+
+  .input {
+    width: 150px;
+    height: 35px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+    outline: none;
+    color: black;
+    font-size: 12px;
+
+    &:focus {
+      border: 1px solid gray;
+    }
+  }
+
+  select {
+    height: 45px;
+  }
+}
+
+.buttonWrapper123 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  button {
+    background: #252c41;
+    color: white;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+
+    @media screen and (max-width: 992px) {
+      padding: 0 24px;
+      font-size: 14px;
+      height: 30px;
+      margin-top: 50px;
+    }
+  }
+
+  .button1 {
+    color: black;
+    background: white;
+  }
+}
